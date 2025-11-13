@@ -13,17 +13,17 @@ public class checkTimes extends PillCounterFir {
   @Override
   public void addPill(int c) {
 <span class="fc" id="L15">    count += c;</span>
-<span class="fc" id="L16">    super.addPill(count);</span>
+<span class="fc" id="L16">    super.addPill(c);</span>
 <span class="fc" id="L17">  }</span>
 
   public void reset() {
-<span class="nc" id="L20">    times.add(count);</span>
-<span class="nc" id="L21">    count = 0;</span>
-<span class="nc" id="L22">    super.reset();</span>
-<span class="nc" id="L23">  }</span>
+<span class="fc" id="L20">    times.add(count);</span>
+<span class="fc" id="L21">    count = 0;</span>
+<span class="fc" id="L22">    super.reset();</span>
+<span class="fc" id="L23">  }</span>
 
   public List&lt;Integer&gt; getAddCounts() {
-<span class="nc" id="L26">    return times;</span>
+<span class="fc" id="L26">    return times;</span>
   }
 
 }

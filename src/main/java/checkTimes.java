@@ -25,5 +25,4 @@ public class checkTimes extends PillCounterFir {
   public List<Integer> getAddCounts() {
     return times;
   }
-
 }

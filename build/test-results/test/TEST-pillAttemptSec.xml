@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="pillAttemptSec" tests="1" skipped="0" failures="1" errors="0" timestamp="2025-11-13T15:47:04.151Z" hostname="ZhoudeMacBook-Air.local" time="0.013">
+<testsuite name="pillAttemptSec" tests="1" skipped="0" failures="1" errors="0" timestamp="2025-11-13T15:54:38.852Z" hostname="ZhoudeMacBook-Air.local" time="0.014">
   <properties/>
-  <testcase name="usage" classname="pillAttemptSec" time="0.013">
-    <failure message="java.lang.AssertionError: expected:&lt;100&gt; but was:&lt;200&gt;" type="java.lang.AssertionError">java.lang.AssertionError: expected:&lt;100&gt; but was:&lt;200&gt;
+  <testcase name="usage" classname="pillAttemptSec" time="0.014">
+    <failure message="java.lang.AssertionError: expected:&lt;100&gt; but was:&lt;5050&gt;" type="java.lang.AssertionError">java.lang.AssertionError: expected:&lt;100&gt; but was:&lt;5050&gt;
 	at org.junit.Assert.fail(Assert.java:89)
 	at org.junit.Assert.failNotEquals(Assert.java:835)
 	at org.junit.Assert.assertEquals(Assert.java:647)
 	at org.junit.Assert.assertEquals(Assert.java:633)
-	at pillAttemptSec.conveyerBelt(pillAttemptSec.java:35)
-	at pillAttemptSec.usage(pillAttemptSec.java:25)
+	at pillAttemptSec.conveyorBelt(pillAttemptSec.java:40)
+	at pillAttemptSec.usage(pillAttemptSec.java:28)
 	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
 	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
 	at org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:59)

@@ -21,40 +21,42 @@ public class pillAttemptSec {
 
   @Test
   public void usage() {
-    PillCounter pc = new checkTimes(new LoggingPillCounter());
-    boolean result = conveyerBelt(pc);
+    LoggingPillCounter real = new LoggingPillCounter();
+
+    checkTimes monitor = new checkTimes(real);
+
+    boolean result = conveyorBelt(monitor);
     assertTrue(result);
+
+    System.out.println(monitor.getAddCounts());
   }
 
-  private boolean conveyerBelt(PillCounter counter) {
-    //make 100 bottles of 100 pills each
-    for (int bottle = 0; bottle < 100; bottle += 1) {
-      for (int pill = 0; pill < 100; pill += 1) {
-        counter.addPill(1); //1 pill at a time
+  private boolean conveyorBelt(PillCounter counter) {
+
+    for (int bottle = 0; bottle < 100; bottle++) {
+      for (int pill = 0; pill < 100; pill++) {
+        counter.addPill(1);
       }
       assertEquals(100, counter.getPillCount());
-      counter.reset(); //for the next bottle
+      counter.reset();
     }
 
-    //make 1000 bottles of 20 pills each
-    for (int bottle = 0; bottle < 1000; bottle += 1) {
+    for (int bottle = 0; bottle < 1000; bottle++) {
       for (int pill = 0; pill < 20; pill += 4) {
-        counter.addPill(4); //4 pills at a time (newer machine)
+        counter.addPill(4);
       }
       assertEquals(20, counter.getPillCount());
-      counter.reset(); //for the next bottle
+      counter.reset();
     }
 
-    //make 500 bottles of 200 pills each
-    for (int bottle = 0; bottle < 500; bottle += 1) {
+    for (int bottle = 0; bottle < 500; bottle++) {
       for (int pill = 0; pill < 200; pill += 2) {
-        counter.addPill(2); //2 pills at a time (third machine)
+        counter.addPill(2);
       }
       assertEquals(200, counter.getPillCount());
-      counter.reset(); //for the next bottle
+      counter.reset();
     }
+
     return true;
   }
-
-  System.out.println(monitor.getAddCounts());
 }

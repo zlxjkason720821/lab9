@@ -11,9 +11,9 @@ public class checkTimes extends PillCounterFir {
   }
 
   @Override
-  public void addPill(int count) {
-    count++;
-    super.addPill(count);
+  public void addPill(int c) {
+    count += c;
+    super.addPill(c);
   }
 
   public void reset() {

@@ -3,28 +3,27 @@ import java.util.List;
 
 public class checkTimes extends PillCounterFir {
 
-<span class="fc" id="L6">  private int count = 0;</span>
-<span class="fc" id="L7">  private List&lt;Integer&gt; times = new ArrayList&lt;&gt;();</span>
+<span class="nc" id="L6">  private int count = 0;</span>
+<span class="nc" id="L7">  private List&lt;Integer&gt; times = new ArrayList&lt;&gt;();</span>
 
   public checkTimes(PillCounter delegate) {
-<span class="fc" id="L10">    super(delegate);</span>
-<span class="fc" id="L11">  }</span>
+<span class="nc" id="L10">    super(delegate);</span>
+<span class="nc" id="L11">  }</span>
 
   @Override
   public void addPill(int c) {
-<span class="fc" id="L15">    count += c;</span>
-<span class="fc" id="L16">    super.addPill(c);</span>
-<span class="fc" id="L17">  }</span>
+<span class="nc" id="L15">    count += c;</span>
+<span class="nc" id="L16">    super.addPill(c);</span>
+<span class="nc" id="L17">  }</span>
 
   public void reset() {
-<span class="fc" id="L20">    times.add(count);</span>
-<span class="fc" id="L21">    count = 0;</span>
-<span class="fc" id="L22">    super.reset();</span>
-<span class="fc" id="L23">  }</span>
+<span class="nc" id="L20">    times.add(count);</span>
+<span class="nc" id="L21">    count = 0;</span>
+<span class="nc" id="L22">    super.reset();</span>
+<span class="nc" id="L23">  }</span>
 
   public List&lt;Integer&gt; getAddCounts() {
-<span class="fc" id="L26">    return times;</span>
+<span class="nc" id="L26">    return times;</span>
   }
-
 }
 </pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.13.202504020838</span></div></body></html>
